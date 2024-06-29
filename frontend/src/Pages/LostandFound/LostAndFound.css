@@ -1,0 +1,83 @@
+.lf{
+    height: 100vh;
+}
+
+.home-title{
+    height: 12%;
+    background-color: #E97E6B;
+    display: flex;
+    text-align: center;
+}
+.home-title-logo{
+    background: url(../../../img/logo-2.png);
+    height: 70px;
+    width: 120px;
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(2px 2px 5px #0d0d0d);
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.home-title > label{
+    color: rgb(250, 250, 250);
+    font-size: 30px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+.home-title-dd{
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 35px;
+    font-size: 20px;
+}
+.home-title-dd > button{
+    color:white;
+}
+.lf-body{
+    display: flex;
+    flex-direction: column;
+}
+.lf-body-title,.lf-desc{
+    margin-right: auto;
+    margin-left: auto;
+}
+.lf-body-title > label{
+    font-size: 40px;
+    margin-top: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+.lf-desc{
+    height: 70px;
+    display: flex;
+}
+.lf-desc > label{
+    /* margin-top:50px; */
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.lf-opt-container{
+    display: flex;
+    height: 42rem;
+}
+.lf-options{
+    display: flex;
+    flex-direction: row;
+    height: 650px;
+    width: 1350px;
+    margin:auto;
+}
+.lf-lost,.lf-found{
+    height: 500px;
+    width: 500px;
+    margin:auto;
+    display: flex;
+}
+.lf-lost> a,.lf-found > a{
+    margin:auto;    
+}
+

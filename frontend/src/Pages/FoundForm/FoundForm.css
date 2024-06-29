@@ -1,0 +1,65 @@
+.found-f{
+    height: 100vh;
+}
+
+.home-title{
+    height: 12%;
+    background-color: #E97E6B;
+    display: flex;
+    text-align: center;
+}
+.home-title-logo{
+    background: url(../../../img/logo-2.png);
+    height: 70px;
+    width: 120px;
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(2px 2px 5px #0d0d0d);
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.home-title > label{
+    color: rgb(250, 250, 250);
+    font-size: 30px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+.home-title-dd{
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 35px;
+    font-size: 20px;
+}
+.home-title-dd > button{
+    color:white;
+}
+
+.found-f-body{
+    height: inherit;
+    display: flex;
+}
+.found-f-container{
+    margin: auto;
+}
+.found-form{
+    width: 400px;
+}
+.f-f{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+}
+.ffin{
+    margin-right: 0 px;
+}
+
+.found-f-submit-in{
+    margin: auto;
+    margin-bottom: 20px;
+    height: 40px;
+    width:200px;
+    font-size: 20px;
+}
+
