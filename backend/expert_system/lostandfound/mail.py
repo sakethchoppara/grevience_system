@@ -41,3 +41,4 @@ def sendMailTo(to,id,d,values):
 
             
     msg.send()
+    print("mail sent successfully !!!s")

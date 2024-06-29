@@ -3,8 +3,6 @@ from transformers import BertTokenizer, BertModel
 from sklearn.metrics.pairwise import cosine_similarity
 import torch
 from .models import LostItems,FoundItems
-print(LostItems.objects.all())
-print(FoundItems.objects.all())
 
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', device_map=0)
 model = BertModel.from_pretrained('bert-base-uncased')
@@ -23,11 +21,7 @@ def mean_pooling(model_output, attention_mask):
 def matchSentence(item,type):
     sentences = ""
     target_sentence = item.itemName+' '+item.itemType+" "+item.keywords+" "+item.description
-    inventory = None
-    if type == 'lost':
-        inventory = FoundItems.objects.all()
-    elif type == "found":
-        inventory = LostItems.objects.all()
+    inventory = FoundItems.objects.all() if type == 'lost' else LostItems.objects.all()
     sentences = [(i, i.itemName+' '+i.itemType+" "+i.keywords+" "+i.description) for i in inventory]
     # print(f"target sentence = {target_sentence} sentence = {sentences}")
     
@@ -61,11 +55,6 @@ def matchSentence(item,type):
 def SearchItem(data):
     type = data['id'].split('_')[0]
     print(data)
-
-    # model = 'LostItems' if type == 'lost' else 'FoundItems'
-
-    # item = f'{model}.objects.get(submissionID="{data}")'
-    # item = eval(item)
     item = LostItems.objects.get(submissionID = data['id']) if type == 'lost' else FoundItems.objects.get(submissionID=data['id'])
 
     values = matchSentence(item,type) 

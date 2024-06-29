@@ -4,7 +4,6 @@ from rest_framework.parsers import MultiPartParser,FormParser
 from django.http import JsonResponse
 from .serializer import LostItemsSerializer,FoundItemsSerializer
 from .search import SearchItem
-import time
 
 
 class LostItemResponse(APIView):
